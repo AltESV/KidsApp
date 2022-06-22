@@ -4,7 +4,7 @@ const character = document.getElementById('character');
 const character2 = document.getElementById('character2'); 
 const question = document.getElementById('question');
 
-//functions that do things
+//functions section
 function changeColor () {
  title.style.backgroundColor = 'blue';
  title.style.color = 'white'
@@ -15,12 +15,12 @@ function returnColor () {
   title.style.color = 'white';
 };
 
-//Chose which problem you want to work on
+//Chose which problem you want to work on will be a prompt in coming update
 const number = [3, 4, 1, 5, 6, 7, 9, 8, 10, 2]
 let problem = 3;
 
 function generateQuestion(number) {
-  const randInt = Math.ceil(Math.random()* number.length)  
+  const randInt = Math.ceil(Math.random()* number.length - 1)  
   return number[randInt]
 };
 
