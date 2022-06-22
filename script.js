@@ -16,26 +16,25 @@ function returnColor () {
 };
 
 //Chose which problem you want to work on
-const number = Math.ceil(Math.random()* 10);
+const number = [3, 4, 1, 5, 6, 7, 9, 8, 10, 2]
 let problem = 3;
 
+function generateQuestion(number) {
+  const randInt = Math.ceil(Math.random()* number.length)  
+  return number[randInt]
+};
+
 function refreshQuestion() {
-  question.innerHTML = `${number} + ${problem} =`;
-};   
+  const number1 = generateQuestion(number)
+  question.innerHTML = `${number1} + ${problem} =`;
+}
 
-const number2 = Math.ceil(Math.random()* 10);
-
-function refreshQuestion2() {
-  question.innerHTML = `${number2} + ${problem} =`;
-};   
-
-function restart() {
-  question.innerHTML = 'Let\'s Go!';
+function increaseLevel() {
+  problem ++
 }
 
 //event listeners that trigger functions
 title.onmousedown = changeColor;
 title.onmouseup = returnColor;
 character.onmousedown = refreshQuestion;
-character2.onmousedown = refreshQuestion2;
-title.onclick = restart;
+title.onclick = increaseLevel;

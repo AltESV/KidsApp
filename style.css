@@ -19,7 +19,7 @@ body {
     border-radius: 15px;
   }
   
-  #character, #character2 {
+  #character {
     width: 100px;
     height: 100px;
     border-radius: 100px;
